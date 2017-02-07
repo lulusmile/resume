@@ -13,3 +13,11 @@
 	.col {
 		background: #ccc; padding:1em 0; text-align:center;
 	}
+
+	.date_left {
+		text-align: left;
+	}
+
+	.company_mid {
+		text-align: center;
+	}
