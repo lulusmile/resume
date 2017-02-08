@@ -12,12 +12,14 @@
 	}
 	.col {
 		background: #ccc; padding:1em 0; text-align:center;
-	}
+	} 
 
-	.date_left {
-		text-align: left;
-	}
+	.row { width 100%; }
 
-	.company_mid {
-		text-align: center;
+	.column-left { width 100%; display:block; }
+	.column-work-experience-date { width: 25%; display:inline; text-align: left; } 
+	.column-work-experience-content { width: 75%; display:inline; margin-left:5%; }
+
+	p {
+		font-size: 15px;
 	}
