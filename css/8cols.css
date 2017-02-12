@@ -22,7 +22,7 @@
 }
 
 .span_3_of_8 {
-	width: 38.1%;
+	width: 36.5%;
 }
 
 .span_2_of_8 {
@@ -34,7 +34,7 @@
 }
 
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+/*  GO FULL WIDTH AT LESS THAN 768 PIXELS */
 
 @media only screen and (max-width: 768px) {
 	.span_8_of_8 {
