@@ -1,40 +1,82 @@
 	html {
 		box-sizing: border-box;
 	}
+
 	*, *:before, *:after {
 		box-sizing: inherit;
 	}
 
 	body {
-		padding:1em; font : 100%/1.4 'Helvetica Neue', arial, helvetica, helve, sans-serif; 	
-	}
-	h1 {
-		font-size:2.2em; padding:0 0 .5em 0;
-	}
-	h2 {
-		font-size:1.5em;
-	}
-	.header {
-		font-family: Arial, Verdana, sans-serif;
-		font-size: 30px;
-		font-weight: bold;
-		text-align: center;
-		padding:5px;
+		font-family: 'Montserrat', sans-serif;
+		margin:0;
 	}
 
-	.contact {
-		text-align: center;
+	h1 {
+		font-size: 18px;
+		color: #787878;
+		margin: 0 0 0 0;
 	}
-	.col {
-		background: #ccc; padding:10px;
-	} 
+
+	h2 {
+		font-size: 18px;
+		text-transform: uppercase;
+		padding: 0;
+		margin: 0;
+	}
+
+	h3 {
+		font-size: 13px;
+		padding: 0;
+		margin: 0;
+	}
+
+	span.date {
+		font-weight: 200;
+		font-size: 15px;
+	}
 
 	.row { width 100%; }
 
-	.column-left { width 100%; display:block; }
-	.column-work-experience-date { width: 25%; display:inline; text-align: left; } 
-	.column-work-experience-content { width: 75%; display:inline; margin-left:5%; }
+	ul {
+		font-size: 13px;
+	}
 
-	p {
-		font-size: 15px;
+	a,a:visited {
+		color:#000;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #E69739;
+	}
+
+	.col {
+		background: #ccc;
+	} 
+	
+	div.col.span_6_of_8 {
+		margin-bottom: 20px;
+	}
+
+	div.col.span_3_of_8 {
+		position: fixed;
+		height: 100vh;
+		background-image: url(forest.jpg);
+	}
+
+	@media only screen and (max-width: 768px) {
+		div.col.span_3_of_8 {
+			position: static;
+			height: 50vh;
+			background-image: url(forest.jpg);
+		}
+
+		div.col.span_2_of_8 {
+			float: right;
+		}
+
+		.tab {
+			position:absolute;
+		}
+
 	}
