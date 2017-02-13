@@ -1,8 +1,7 @@
 /* Style the list */
 
 .tab {
-    margin:auto;
-    position:fixed;
+    margin:0px;
     width: 100%;
 }
 
@@ -38,7 +37,6 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 /* Style the tab content */
 .tabcontent {
     display: none;
-    border: 1px solid #ccc;
-    border-top: none;
-    margin: 60px 10px 10px 10px;
+    border: none;
+    margin: 10px;
 }

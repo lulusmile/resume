@@ -11,6 +11,12 @@
 		margin:0;
 	}
 
+	.heading {
+		font-size: 18px;
+		color: #787878;
+		margin: 0 0 0 0;
+	}
+
 	h2 {
 		font-size: 18px;
 		text-transform: uppercase;
@@ -29,6 +35,8 @@
 		font-size: 15px;
 	}
 
+	.row { width 100%; }
+
 	ul {
 		font-size: 13px;
 	}
@@ -42,32 +50,52 @@
 		color: #E69739;
 	}
 
-	.fixed-content-left {			
-		position: fixed; 
-		height: 100vh;
-		width: 30%;
-		background-image: url('forest.jpg');
+	.col {
+		background: #ccc;
+		margin: 0;
+	} 
+	
+	.col.span_3_of_8 {
+		width: 36.5%;
+	}
+	
+	.col.span_5_of_8 {
+		width: 63.5%;
+	}
+	
+	.col.span_6_of_8 {
+		margin-bottom: 20px;
 	}
 
-	.content-right {
-		float: right;
-		width: 70%;
+	.fixed-content { 
+		position: fixed; 
+		width: 36.5%;
+		height: 100vh;
+		background-image: url('forest.jpg');
+	}
+	
+	.fixed-content-mate {
+		padding:0.1px;
 	}
 
 	@media only screen and (max-width: 768px) {
 		
-		.fixed-content-left {			
-			position: relative; 
-			height: 40vh;
+		.col.span_5_of_8 {
+			width: 100%;
+		}
+		
+		.col.span_3_of_8 {
+			width: 100%;
+			padding:0.1px;
+			height: 50vh;
+		}
+			
+		.fixed-content {			
+			position: absolute; 
+			height: 50vh;
 			width: 100%;
 			background-image: url('forest.jpg');
 		}
-		
-		.content-right {
-			float: right;
-			position: absolute;
-			width: 100%;
-		}
 
-		.tab { position:static; }
+		.tab { position:relative; }
 	}
