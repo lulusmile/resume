@@ -52,9 +52,18 @@
 
 	.col {
 		background: #ccc;
+		margin: 0;
 	} 
 	
-	div.col.span_6_of_8 {
+	.col.span_3_of_8 {
+		width: 36.5%;
+	}
+	
+	.col.span_5_of_8 {
+		width: 63.5%;;
+	}
+	
+	.col.span_6_of_8 {
 		margin-bottom: 20px;
 	}
 
@@ -62,23 +71,16 @@
 		position: fixed; 
 		width: 36.5%;
 		height: 100vh;
+		background-image: url('forest.jpg');
 	}
-
-	.tab { position:relative; }
 
 	@media only screen and (max-width: 768px) {
 		.fixed-content {
-			position: static;
+			
 			height: 50vh;
 			width: 100%;
+			background-image: url('forest.jpg');
 		}
 
-		div.col.span_2_of_8 {
-			float: right;
-		}
-
-		.tab {
-			position:absolute;
-		}
-
+		.tab { position:relative; }
 	}
