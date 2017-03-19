@@ -1,101 +1,17 @@
-	html {
-		box-sizing: border-box;
-	}
+section.module.parallax {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
-	*, *:before, *:after {
-		box-sizing: inherit;
-	}
-
-	body {
-		font-family: 'Montserrat', sans-serif;
-		margin:0;
-	}
-
-	.heading {
-		font-size: 18px;
-		color: #787878;
-		margin: 0 0 0 0;
-	}
-
-	h2 {
-		font-size: 18px;
-		text-transform: uppercase;
-		padding: 0;
-		margin: 0;
-	}
-
-	h3 {
-		font-size: 13px;
-		padding: 0;
-		margin: 0;
-	}
-
-	span.date {
-		font-weight: 200;
-		font-size: 15px;
-	}
-
-	.row { width 100%; }
-
-	ul {
-		font-size: 13px;
-	}
-
-	a,a:visited {
-		color:#000;
-		text-decoration: none;
-	}
-
-	a:hover {
-		color: #E69739;
-	}
-
-	.col {
-		background: #ccc;
-		margin: 0;
-	} 
-	
-	.col.span_3_of_8 {
-		width: 36.5%;
-	}
-	
-	.col.span_5_of_8 {
-		width: 63.5%;
-	}
-	
-	.col.span_6_of_8 {
-		margin-bottom: 20px;
-	}
-
-	.fixed-content { 
-		position: fixed; 
-		width: 36.5%;
-		height: 100vh;
-		background-image: url('forest.jpg');
-	}
-	
-	.fixed-content-mate {
-		padding:0.1px;
-	}
-
-	@media only screen and (max-width: 768px) {
-		
-		.col.span_5_of_8 {
-			width: 100%;
-		}
-		
-		.col.span_3_of_8 {
-			width: 100%;
-			padding:0.1px;
-			height: 50vh;
-		}
-			
-		.fixed-content {			
-			position: absolute; 
-			height: 50vh;
-			width: 100%;
-			background-image: url('forest.jpg');
-		}
-
-		.tab { position:relative; }
-	}
+section.module.parallax-1 {
+  background-image: url("forest.jpg");
+}
+section.module.parallax-2 {
+  background-image: url("snow.jpeg");
+}
+section.module.parallax-3 {
+  background-image: url("../img/demo/_small/3.jpg");
+}

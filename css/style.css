@@ -11,6 +11,44 @@
 		margin:0;
 	}
 
+	.fixed-content-left {			
+		position: fixed; 
+		height: 100vh;
+		width: 40%;
+		background-image: url('forest.jpg'); /* fallback */
+		background-image: linear-gradient(rgba(255,0,0,0.5),rgba(255,100,10,0.5)), url('forest.jpg');
+		display: flex;
+		align-items: center;
+	}
+
+	.content-right {
+		float: right;
+		width: 60%;
+	}
+
+	.summary-centre-left {
+		text-align: center;
+		max-width: 70%;
+		color: white;
+		margin: auto;
+	}
+
+	.col1 {
+		float: left;
+		width: 30%;
+	}
+
+	.col2 {
+		float: left;
+		width: 70%;
+	}
+
+	.row {
+		/*background-color: orange;*/
+		overflow: auto;
+		margin-bottom: 10px;
+	}
+
 	h2 {
 		font-size: 18px;
 		text-transform: uppercase;
@@ -27,6 +65,7 @@
 	span.date {
 		font-weight: 200;
 		font-size: 15px;
+		margin-top: 10px;
 	}
 
 	ul {
@@ -38,43 +77,32 @@
 		text-decoration: none;
 	}
 
-	a:hover {
+	a:hover,.heading {
 		color: #E69739;
 	}
 
-	.fixed-content-left {			
-		position: fixed; 
-		height: 100vh;
-		width: 30%;
-		background-image: url('forest.jpg');
-		display: flex;
-		align-items: center;
-	}
-
-	.content-right {
-		float: right;
-		width: 70%;
-	}
-
-	.summary-centre-left {
-		text-align: center;
-		margin: 10px;
-	}
-
 	img {
-		margin: 5px;
+		margin: 10px 5px 5px 5px;
 	}
 
-	.logo-linkedin {
+	img:hover {
+		border-radius: 55%;
+		background: #E69739;
+	}
+
+	.logo {
 		height:22px;
 		width:22px;
 
 	}
 
-	.logo-mail {
-		height:22px;
-		width:22px;
-
+	@media only screen and (max-width: 1100px) {
+		.col1 {
+			width:100%;
+		}
+		.col2 {
+			width:100%;
+		}
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -84,6 +112,7 @@
 			height: 40vh;
 			width: 100%;
 			background-image: url('forest.jpg');
+			background-image: linear-gradient(rgba(255,0,0,0.5),rgba(255,100,10,0.5)), url('forest.jpg');
 		}
 		
 		.content-right {
@@ -98,19 +127,12 @@
 	}
 
 	@media only screen and (max-width: 480px) {
-		.logo-linkedin {
+		.logo {
 			height:44px;
 			width:44px;
-
-		}
-
-		.logo-mail {
-			height:44px;
-			width:44px;
-
 		}
 
 		img {
-			margin:7px;
+			margin:14px 7px 7px 7px;
 		}
 	}
