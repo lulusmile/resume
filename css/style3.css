@@ -1,36 +1,54 @@
 .parallax {
-	-webkit-perspective: 1px;
-	perspective: 1px;
-	height: 500px; /* fallback for older browsers */
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .parallax_layer {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
+
+.parallax_layer_back {
+ -webkit-transform: translateZ(-1px) scale(2);
+ transform: translateZ(-1px) scale(2);
+}
+
+.parallax_layer_base {
+ -webkit-transform: translateZ(0);
+ transform: translateZ(0);
+}
+
+
+.parallax_group {
+ position: relative;
+ height: 500px; /* fallback for older browsers */
+ height: 100vh;
+ -webkit-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+}
+
   /* style the groups
   --------------------------------------------- */
 
   #group1 .parallax_layer_back {
-  	background-image: url("../img/mountains.png");
-  	background-repeat: no-repeat;
+    background: rgb(102,204,102);
   }
 
   #group1 .parallax_layer_base {
-  	background-image: url("../img/birds.png");
-  	background-repeat: no-repeat;
-  	background-position: center;
+    background-image: url("../img/birds.png");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   #group2 .parallax_layer_back {
-    background-image: url("../img/mountains.png");
-    background-repeat: no-repeat;
+    background: rgb(123,210,102);
   }
 
   #group2 .parallax_layer_base {
@@ -39,51 +57,26 @@
     background-position: center;
   }
 
-  /*
-
-  #group2 .parallax_layer_back {
-  	background-image: url("../img/mountains2.png");
-  	background-repeat: no-repeat;
-  	height: 100vh;
+  #group3 .parallax_layer_back {
+    background: rgb(184,223,101);
   }
 
-  #group2 .parallax_layer_base {
-  	background-image: url("../img/birds2.png");
-  	background-repeat: no-repeat;
-  	background-position: center;
-    }*/
-
-    .parallax_layer_back {
-     -webkit-transform: translateZ(-1px) scale(2);
-     transform: translateZ(-1px) scale(2);
-   }
-
-   .parallax_layer_base {
-     -webkit-transform: translateZ(0);
-     transform: translateZ(0);
-   }
-
-
-   .parallax_group {
-     position: relative;
-     height: 500px; /* fallback for older browsers */
-     height: 100vh;
-     -webkit-transform-style: preserve-3d;
-     transform-style: preserve-3d;
-   }
-
-
+  #group3 .parallax_layer_base {
+    background-image: url("../img/birds.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
  /* demo styles
  --------------------------------------------- */
 
- /* add some padding to force scrollbars */
+ /* add some padding to force scrollbars 
  .parallax_layer {
    padding:100vh 0;
- }
+   }*/
 
- /* stackoverflow.com/questions/27681848/what-is-causing-two-scrollbars-here */
- body {
- 	margin:0;
- 	padding:0;
- }
+   /* stackoverflow.com/questions/27681848/what-is-causing-two-scrollbars-here */
+   body {
+    margin:0;
+    padding:0;
+  }
