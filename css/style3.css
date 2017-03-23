@@ -1,54 +1,99 @@
 .parallax {
-  -webkit-perspective: 1px;
-  perspective: 1px;
   height: 500px; /* fallback for older browsers */
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  -webkit-perspective-origin-x: 100%;
+  perspective-origin-x: 100%;
+}
+
+.parallax_group {
+  position: relative;
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .parallax_layer {
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  -webkit-transform-origin-x: 100%;
+  transform-origin-x: 100%;
 }
 
-.parallax_layer_back {
- -webkit-transform: translateZ(-1px) scale(2);
- transform: translateZ(-1px) scale(2);
+.parallax_layer_fore {
+  -webkit-transform: translateZ(90px) scale(.7);
+  transform: translateZ(90px) scale(.7);
+  z-index: 1;
 }
 
 .parallax_layer_base {
- -webkit-transform: translateZ(0);
- transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
 }
 
-
-.parallax_group {
- position: relative;
- height: 500px; /* fallback for older browsers */
- height: 100vh;
- -webkit-transform-style: preserve-3d;
- transform-style: preserve-3d;
+.parallax_layer_back {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
 }
+
+.parallax_layer_deep {
+  -webkit-transform: translateZ(-600px) scale(3);
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+}
+
+    /* demo styles
+    --------------------------------------------- */
+
+    body, html {
+      overflow: hidden;
+    }
+
+    body {
+      font: 100% / 1.5 Arial;
+    }
+
+    * {
+      margin:0;
+      padding:0;
+    }
+
+    .parallax {
+      font-size: 200%;
+    }
+
+    /* centre the content in the parallax layers */
+    .title {
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
 
   /* style the groups
   --------------------------------------------- */
+
+  #group1 {
+    z-index: 3; /* slide under group 2 */
+  }
 
   #group1 .parallax_layer_back {
     background: rgb(102,204,102);
   }
 
-  #group1 .parallax_layer_base {
-    background-image: url("../img/birds.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #group2 .parallax_layer_back {
-    background: rgb(123,210,102);
+  #group2 {
+    z-index: 5; /* slide over group 1 */
   }
 
   #group2 .parallax_layer_base {
@@ -57,23 +102,8 @@
     background-position: center;
   }
 
-  #group3 .parallax_layer_back {
-    background: rgb(184,223,101);
-  }
-
-  #group3 .parallax_layer_base {
-    background-image: url("../img/birds.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
  /* demo styles
  --------------------------------------------- */
-
- /* add some padding to force scrollbars 
- .parallax_layer {
-   padding:100vh 0;
-   }*/
 
    /* stackoverflow.com/questions/27681848/what-is-causing-two-scrollbars-here */
    body {
