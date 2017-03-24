@@ -97,16 +97,47 @@
   }
 
   #group2 .parallax_layer_base {
+    background: rgb(153,216,101);
     background-image: url("../img/birds.png");
     background-repeat: no-repeat;
-    background-position: center;
+
+  }
+
+  #group3 {
+    z-index: 2; /* slide under group 1 & 2 */
+  }
+
+  #group3 .parallax_layer_back {
+    background: rgb(184,223,101);
+  }
+
+  #group4 {
+    z-index: 5; /* slide over group 3 */
+  }
+
+  #group4 .parallax_layer_base {
+    background: rgb(153,216,101);
+    background-image: url("../img/birds.png");
+    background-repeat: no-repeat;
+
+  }
+
+  #group5 {
+    z-index: 4; /* slide under group 4 */
+  }
+
+  #group5 .parallax_layer_base {
+    background: rgb(100,216,151);
+    background-image: url("../img/birds.png");
+    background-repeat: no-repeat;
+
   }
 
  /* demo styles
  --------------------------------------------- */
 
-   /* stackoverflow.com/questions/27681848/what-is-causing-two-scrollbars-here */
-   body {
-    margin:0;
-    padding:0;
-  }
+ /* stackoverflow.com/questions/27681848/what-is-causing-two-scrollbars-here */
+ body {
+  margin:0;
+  padding:0;
+}
