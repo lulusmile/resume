@@ -1,3 +1,144 @@
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+  }
+
+  .fixed-content-left {     
+    position: fixed; 
+    height: 100vh;
+    width: 40%;
+    background-image: url('forest.jpg'); /* fallback */
+    background-image: linear-gradient(rgba(255,0,0,0.5),rgba(255,100,10,0.5)), url('forest.jpg');
+    display: flex;
+    align-items: center;
+  }
+
+  .content-right {
+    float: right;
+    width: 60%;
+  }
+
+  .summary-centre-left {
+    text-align: center;
+    max-width: 70%;
+    color: white;
+    margin: auto;
+  }
+
+  .col1 {
+    float: left;
+    width: 30%;
+  }
+
+  .col2 {
+    float: left;
+    width: 70%;
+  }
+
+  .row {
+    /*background-color: orange;*/
+    overflow: auto;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+  }
+
+  span.date {
+    font-weight: 200;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  ul {
+    font-size: 13px;
+  }
+
+  a,a:visited {
+    color:#000;
+    text-decoration: none;
+  }
+
+  a:hover,.heading {
+    color: #E69739;
+  }
+
+  img {
+    margin: 10px 5px 5px 5px;
+  }
+
+  img:hover {
+    border-radius: 55%;
+    background: #E69739;
+  }
+
+  .logo {
+    height:22px;
+    width:22px;
+
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .col1 {
+      width:100%;
+    }
+    .col2 {
+      width:100%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    
+    .fixed-content-left {     
+      position: relative; 
+      height: 40vh;
+      width: 100%;
+      background-image: url('forest.jpg');
+      background-image: linear-gradient(rgba(255,0,0,0.5),rgba(255,100,10,0.5)), url('forest.jpg');
+    }
+    
+    .content-right {
+      float: right;
+      position: absolute;
+      width: 100%;
+    }
+
+    .tab {
+      position:static;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .logo {
+      height:44px;
+      width:44px;
+    }
+
+    img {
+      margin:14px 7px 7px 7px;
+    }
+  }
+
+/* PARALLAX */
+
 .parallax {
   height: 500px; /* fallback for older browsers */
   height: 100vh;
@@ -41,7 +182,7 @@
 
 .parallax_layer_back {
   -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2.005);
   z-index: 3;
 }
 
