@@ -182,7 +182,7 @@
 
 .parallax_layer_back {
   -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2.005);
+  transform: translateZ(300px) scale(2.005);
   z-index: 3;
 }
 
