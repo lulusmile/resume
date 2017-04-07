@@ -96,101 +96,61 @@
 
   }
 
-  @media only screen and (max-width: 1100px) {
-    .col1 {
-      width:100%;
-    }
-    .col2 {
-      width:100%;
-    }
+  /* PARALLAX */
+
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    -webkit-perspective-origin-x: 100%;
+    perspective-origin-x: 100%;
   }
 
-  @media only screen and (max-width: 768px) {
-    
-    .fixed-content-left {     
-      position: relative; 
-      height: 40vh;
-      width: 100%;
-      background-image: url('forest.jpg');
-      background-image: linear-gradient(rgba(255,0,0,0.5),rgba(255,100,10,0.5)), url('forest.jpg');
-    }
-    
-    .content-right {
-      float: right;
-      position: absolute;
-      width: 100%;
-    }
-
-    .tab {
-      position:static;
-    }
+  .parallax_group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
   }
 
-  @media only screen and (max-width: 480px) {
-    .logo {
-      height:44px;
-      width:44px;
-    }
-
-    img {
-      margin:14px 7px 7px 7px;
-    }
+  .parallax_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-origin-x: 100%;
+    transform-origin-x: 100%;
   }
 
-/* PARALLAX */
+  .parallax_layer_fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
 
-.parallax {
-  height: 500px; /* fallback for older browsers */
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px;
-  -webkit-perspective-origin-x: 100%;
-  perspective-origin-x: 100%;
-}
+  .parallax_layer_base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
 
-.parallax_group {
-  position: relative;
-  height: 500px; /* fallback for older browsers */
-  height: 100vh;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
+  .parallax_layer_back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    left: -9px;
+    z-index: 3;
+  }
 
-.parallax_layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-transform-origin-x: 100%;
-  transform-origin-x: 100%;
-}
-
-.parallax_layer_fore {
-  -webkit-transform: translateZ(90px) scale(.7);
-  transform: translateZ(90px) scale(.7);
-  z-index: 1;
-}
-
-.parallax_layer_base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  z-index: 4;
-}
-
-.parallax_layer_back {
-  -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(300px) scale(2.005);
-  z-index: 3;
-}
-
-.parallax_layer_deep {
-  -webkit-transform: translateZ(-600px) scale(3);
-  transform: translateZ(-600px) scale(3);
-  z-index: 2;
-}
+  .parallax_layer_deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
 
     /* demo styles
     --------------------------------------------- */
@@ -291,4 +251,42 @@
  body {
   margin:0;
   padding:0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .col1 {
+    width:100%;
+  }
+  .col2 {
+    width:100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .fixed-content-left {     
+    position: relative; 
+    height: 40vh;
+    width: 100%;
+    background-image: url('forest.jpg');
+    background-image: linear-gradient(rgba(255,0,0,0.5),rgba(255,100,10,0.5)), url('forest.jpg');
+  }
+
+  .content-right {
+    float: right;
+    position: absolute;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .logo {
+    height:44px;
+    width:44px;
+  }
+
+  img {
+    margin:14px 7px 7px 7px;
+  }
 }

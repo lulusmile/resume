@@ -27,6 +27,12 @@
   transform-origin-x: 100%;
 }
 
+.parallax_layer_fore {
+  -webkit-transform: translateZ(90px) scale(.7);
+  transform: translateZ(90px) scale(.7);
+  z-index: 1;
+}
+
 .parallax_layer_base {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -34,11 +40,17 @@
 }
 
 .parallax_layer_back {
-  -webkit-transform: translateZ(-150px) scale(1);
-  transform: translateZ(-150px) scale(1);
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  /*margin-left: -8px;*/
   z-index: 3;
 }
 
+.parallax_layer_deep {
+  -webkit-transform: translateZ(-600px) scale(3);
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+}
 
     /* demo styles
     --------------------------------------------- */
@@ -87,6 +99,46 @@
 
   #group2 .parallax_layer_base {
     background: rgb(153,216,101);
+    background-image: url("../img/birds.png");
+    background-repeat: no-repeat;
+
+  }
+
+  #group3 {
+    z-index: 2; /* slide under group 1 & 2 */
+  }
+
+  #group3 .parallax_layer_back {
+    background: rgb(184,223,101);
+  }
+
+  #group4 {
+    z-index: 5; /* slide over group 3 */
+  }
+
+  #group4 .parallax_layer_base {
+    background: rgb(153,216,101);
+    background-image: url("../img/birds.png");
+    background-repeat: no-repeat;
+
+  }
+
+  #group5 {
+    z-index: 4; /* slide under group 4 */
+  }
+
+  #group5 .parallax_layer_back {
+    background: rgb(100,216,151);
+    background-repeat: no-repeat;
+
+  }
+
+  #group6 {
+    z-index: 5; /* slide over group 5 */
+  }
+
+  #group6 .parallax_layer_base {
+    background: rgb(200,216,151);
     background-image: url("../img/birds.png");
     background-repeat: no-repeat;
 
